@@ -1,0 +1,13 @@
+@function colwidth1 ($multiply, $colwidth) {
+
+    $mf: $multiply - $colwidth / $colwidth;
+    
+    @if($multiply == 1){
+            @return calc( #{$multiply} * ((100% - (#{$colwidth} - 1) * #{$gutter-H}) / #{$colwidth}) );
+    } @else {
+            @return calc( (#{$multiply} * ((100% - (#{$colwidth} - 1) * #{$gutter-H}) / #{$colwidth}) ) + (#{$gutter-H} * #{$mf} ) );
+    }
+}
+    
+    
+    
