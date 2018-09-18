@@ -49,6 +49,15 @@
             background-color: rgba($color-white, 0.514);
         }
     }
+
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after {
+            background-color: rgba($color-primary, 0.514);
+        }
+    }
     
     &--animated {
         animation:  moveInBottom .5s ease-out .75s;
