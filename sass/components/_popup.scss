@@ -24,12 +24,20 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
+
+        @include respond(tab-port) {
+            width: 90%;
+        }
     }
 
     &__left {
         width: 33.3333333%;
         display: table-cell;
-        // vertical-align: middle;
+        vertical-align: middle;
+        
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &__right {
@@ -37,6 +45,10 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(tab-port) {
+            padding: 1rem 3rem;
+        }
 
     }
 
